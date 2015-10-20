@@ -1,0 +1,53 @@
+*, *:before, *:after {
+  box-sizing: border-box !important;
+}
+
+div#books {
+  -moz-column-width: 11em;
+  -webkit-column-width: 11em;
+  -moz-column-gap: 1em;
+  -webkit-column-gap: 1em;
+}
+
+div.book {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 0 2px 1px rgba(0,0,0,0.30), 0 0px 0px rgba(0,0,0,0.22);
+  border: 1px #ccc solid;
+  margin-bottom: 0.8em;
+}
+
+span.author {
+  font-size: 11px;
+}
+
+span.name {
+  display: block;
+  word-wrap: break-word;
+  font-size: 13px;
+  padding-top: 11px;
+}
+
+img.cover {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  padding: 1em;
+  font-family: "Garamond", serif;
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 1em 0 0.5em 0;
+  color: #343434;
+  font-weight: normal;
+  font-family: 'Ultra', sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  padding-bottom: 1em;
+  text-align: center;
+}
