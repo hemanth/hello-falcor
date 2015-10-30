@@ -8,12 +8,18 @@ Do check the [demo](http://hello-falcor.herokuapp.com/)!
 __Heart of the Server:__
 
 ```js
-app.use('/books.json', falcorExpress.dataSourceRoute(function (req, res) {
+app.use('/library.json', falcorExpress.dataSourceRoute(function (req, res) {
   return new Router([
     {
-      route: "books",
+      route: "books.list",
       get: function() {
-        return {path:["books"], value: JSON.stringify(books) };
+        return {path:["books"], value: JSON.stringify(Library) };
+      }
+    },
+    {
+      route: "books.names",
+      get: function() {
+        return {path:["books","names"], value: Library.map( book => book.name )};
       }
     }
   ]);
@@ -28,7 +34,7 @@ var model = new falcor.Model({source: new falcor.HttpDataSource('/books.json') }
 model.
   get("books").
   then(function(response) {
-    var books = JSON.parse(response.json.books).books;
+        var books = JSON.parse(response.json.books);
    });
 ```
 
