@@ -7,9 +7,15 @@ var app = express();
 app.use('/library.json', falcorExpress.dataSourceRoute(function (req, res) {
   return new Router([
     {
-      route: "books",
+      route: "books.list",
       get: function() {
         return {path:["books"], value: JSON.stringify(Library) };
+      }
+    },
+    {
+      route: "books.names",
+      get: function() {
+        return {path:["books","names"], value: Library.map( book => book.name )};
       }
     }
   ]);

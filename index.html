@@ -8,7 +8,7 @@
       var model = new falcor.Model({source: new falcor.HttpDataSource('/library.json') });
 
       model.
-        get("books").
+        get("books.list").
         then(function(response) {
           // Need to make this better.
           var books = JSON.parse(response.json.books);
