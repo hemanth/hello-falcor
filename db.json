@@ -1,4 +1,4 @@
-{ "books":[{
+[{
         "name": "Functional JavaScript: Introducing Functional Programming with Underscore.js",
         "author": "Michael Fogus",
         "isbn": "978-1449360726",
@@ -101,5 +101,5 @@
         "author": "David Herman",
         "isbn": "978-0321812186",
         "url": "http://effectivejs.com/"
-    }]
-}
+    }
+]

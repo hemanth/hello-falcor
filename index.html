@@ -5,17 +5,18 @@
     <script src='//netflix.github.io/falcor/build/falcor.browser.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.js'> </script>
     <script>
-      var model = new falcor.Model({source: new falcor.HttpDataSource('/books.json') });
+      var model = new falcor.Model({source: new falcor.HttpDataSource('/library.json') });
 
       model.
         get("books").
         then(function(response) {
           // Need to make this better.
-          var books = JSON.parse(response.json.books).books;
+          var books = JSON.parse(response.json.books);
           var source = document.getElementById("book-template").innerHTML;
           var template = Handlebars.compile(source);
           document.getElementById('books').innerHTML = template(books);
         });
+
     </script>
     <link rel=stylesheet href="./styles.css">
     <title>Falcor.js example</title>
