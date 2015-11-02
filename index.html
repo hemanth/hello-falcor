@@ -29,7 +29,11 @@
    <script id="book-template" type="text/x-handlebars-template">
    {{#each this}}
      <div class="book">
-       <img src="http://covers.openlibrary.org/b/isbn/{{isbn}}-M.jpg" alt={{name}} class="cover">
+       {{#if isbn}}
+          <img src="http://covers.openlibrary.org/b/isbn/{{isbn}}-M.jpg" alt={{name}} class="cover">
+       {{else}}
+          <img src="default.jpeg" alt={{name}} class="cover">
+       {{/if}}
        <a href={{url}}><span class="name">{{name}}</span></a>
        <span class="author">By {{author}}</span>
      </div>
