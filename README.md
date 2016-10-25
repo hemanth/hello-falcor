@@ -1,7 +1,7 @@
 # hello-faclor
 > A simple [faclor.js](https://netflix.github.io/falcor/) example.
 
-This example uses handlbars and some faclor magic to list JS books.
+This example uses handlebars and some falcor magic to list JS books.
 
 Do check the [demo](http://hello-falcor.herokuapp.com/)!
 
